@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZApp.Views.LoginPage"
+             Title="Z Login"
+             xmlns:res="clr-namespace:ZApp.Resources.LenguajeResources">
+    <VerticalStackLayout
+        Style="{StaticResource VSLoginStyle}">
+        <Frame 
+            Style="{StaticResource FrameLogoLoginStyle}" >
+            <Label 
+                Style="{StaticResource LabelLogoLoginStyle}"></Label>
+        </Frame>
+        <HorizontalStackLayout 
+            Style="{StaticResource HSEntryLoginStyle}">
+            <Image
+                Source="usericon.png"
+                Style="{StaticResource ImageEntryLoginStyle}"/>
+            <Entry 
+                Placeholder="{x:Static res:LRLoginResource.lblEmail}" 
+                Text="{Binding LoginRequestModel.Email}"
+                Keyboard="Email" 
+                WidthRequest="250"></Entry>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout 
+            Style="{StaticResource HSEntryLoginStyle}">
+            <Image 
+                Style="{StaticResource ImageEntryLoginStyle}"
+                Source="passicon.png"/>
+
+            <Entry 
+                Placeholder="{x:Static res:LRLoginResource.lblPassword}" 
+                Text="{Binding LoginRequestModel.Password}"
+                IsPassword="True" 
+                WidthRequest="250"></Entry>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox 
+                VerticalOptions="Center"></CheckBox>
+            <Label 
+                VerticalOptions="Center"
+                Text="{x:Static res:LRLoginResource.lblRememberme}" ></Label>
+        </HorizontalStackLayout>
+
+        <Button 
+            Text="Enter" 
+            Command="{Binding LoginCommand}"
+            Style="{StaticResource ButtonLoginStyle}"/>
+
+        <HorizontalStackLayout 
+            Spacing="12" 
+            HorizontalOptions="Center">
+            <Frame 
+                Style="{StaticResource FrameImageEntrysLoginStyle}">
+                <Image  
+                    Source="instagram_g.png" 
+                    Style="{StaticResource ImageAlternativeLoginStyle}" />
+            </Frame>
+            <Frame 
+                Style="{StaticResource FrameImageEntrysLoginStyle}">
+                <Image  
+                    Source="facebook_g.png" 
+                    Style="{StaticResource ImageAlternativeLoginStyle}"/>
+            </Frame>
+            <Frame 
+                Style="{StaticResource FrameImageEntrysLoginStyle}">
+                <Image 
+                    Source="googleicon.png" 
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    Style="{StaticResource ImageAlternativeLoginStyle}"/>
+            </Frame>
+            <Frame 
+                Style="{StaticResource FrameImageEntrysLoginStyle}">
+                <Image   
+                    Source="twittericon.png" 
+                    HeightRequest="25"
+                    WidthRequest="30"
+                    Style="{StaticResource ImageAlternativeLoginStyle}"/>
+            </Frame>
+        </HorizontalStackLayout>
+
+        <Button
+            Text="Register" 
+            Style="{StaticResource ButtonLoginStyle}"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,73 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ZApp"
+             x:Class="ZApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <!--Login Style-->
+
+            <Style x:Key="VSLoginStyle" TargetType="VerticalStackLayout">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="WidthRequest" Value="280"/>
+                <Setter Property="Spacing" Value="10"/>
+            </Style>
+
+            <Style x:Key="FrameLogoLoginStyle" TargetType="Frame">
+                <Setter Property="Padding" Value="20"/>
+                <Setter Property="Margin" Value="80,0,80,20"/>
+                <Setter Property="BackgroundColor" Value="#F49390"/>
+                <Setter Property="CornerRadius" Value="60"/>
+            </Style>
+
+            <Style x:Key="LabelLogoLoginStyle" TargetType="Label">
+                <Setter Property="Text" Value="Z"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="50"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="FrameImageEntrysLoginStyle" TargetType="Frame">
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="BackgroundColor" Value="#F7F6F6"/>
+                <Setter Property="CornerRadius" Value="60"/>
+            </Style>
+
+            <Style x:Key="VSContentLoginStyle" TargetType="VerticalStackLayout">
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="Spacing" Value="15"/>
+            </Style>
+
+            <Style x:Key="HSEntryLoginStyle" TargetType="HorizontalStackLayout">
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="Spacing" Value="5"/>
+                <Setter Property="HeightRequest" Value="45"/>
+                
+            </Style>
+
+            <Style x:Key="ImageEntryLoginStyle" TargetType="Image">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="WidthRequest" Value="20"/>
+                <Setter Property="HeightRequest" Value="20"/>
+            </Style>
+
+            <Style x:Key="ButtonLoginStyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="285"/>
+                <Setter Property="Background" Value="#F49390"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+
+            <Style x:Key="ImageAlternativeLoginStyle" TargetType="Image">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Aspect" Value="Fill"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
